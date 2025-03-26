@@ -3,11 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <title>Delir Video – Willkommen</title>
-  <meta http-equiv="refresh" content="0; URL=teil1.html" />
-    window.location.href = "part1.html";
-  </script>
-  <p>Sie werden zu Teil 1 weitergeleitet...</p>
+  <!-- Meta-Refresh Weiterleitung -->
+  <meta http-equiv="refresh" content="0; URL=part1.html" />
+</head>
 <body>
-  <p>Weiterleitung zu Teil 1... <a href="part1.html">Hier klicken, falls keine Weiterleitung erfolgt.</a></p>
+  <p>Sie werden zu Teil 1 weitergeleitet...
+     <a href="part1.html">Hier klicken, falls keine Weiterleitung erfolgt.</a>
+  </p>
+
+  <!-- JavaScript-Fallback (falls meta refresh blockiert wird) -->
+  <script>
+    setTimeout(function () {
+      window.location.href = "part1.html";
+    }, 1000);
+  </script>
 </body>
 </html>
