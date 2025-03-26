@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teil 2 – 10:34 bis 15:36</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <iframe id="video2"
+    src="https://player.vimeo.com/video/1068632142?autoplay=1#t=634s"
+    width="800" height="450"
+    frameborder="0" allow="autoplay; fullscreen" allowfullscreen
+    title="Video: Teil 2 – 10:34 bis 15:36">
+  </iframe>
+
+  <script src="https://player.vimeo.com/api/player.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const VIDEO_PAUSE_TIME = 936; // 15:36 in seconds
+      const videoElement = document.getElementById('video2');
+      const player2 = new Vimeo.Player(videoElement);
+
+      player2.on('timeupdate', function(data) {
+        if (data.seconds >= VIDEO_PAUSE_TIME) {
+          player2.pause();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

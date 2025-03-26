@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teil 1 – Einführung in das Thema (0:00 bis 10:34)</title>
+  <link rel="preload" as="style" href="style.css" onload="this.rel='stylesheet'">
+</head>
+<body>
+  <iframe id="video1"
+      src="https://player.vimeo.com/video/1068632142?autoplay=1"
+      width="800" height="450"
+      frameborder="0" allow="autoplay; fullscreen" allowfullscreen
+      title="Video: Teil 1 – 0:00 bis 10:34">
+  </iframe>
+
+  <script src="https://player.vimeo.com/api/player.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const VIDEO_PAUSE_TIME = 634; // 10:34 in seconds
+      const videoElement = document.getElementById('video1');
+      const player1 = new Vimeo.Player(videoElement);
+
+      player1.on('timeupdate', function(data) {
+        if (data.seconds >= VIDEO_PAUSE_TIME) {
+          player1.pause();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

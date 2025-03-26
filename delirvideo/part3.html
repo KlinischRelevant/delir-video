@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teil 3 – ab 15:36 bis Ende</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <iframe id="video3"
+    src="https://player.vimeo.com/video/1068632142?autoplay=1#t=936s"
+    width="800" height="450"
+    frameborder="0" allow="autoplay; fullscreen" allowfullscreen
+    title="Video: Teil 3 – ab 15:36 bis Ende">
+  </iframe>
+
+  <script src="https://player.vimeo.com/api/player.js" defer></script>
+  <script>
+    // Kein Stop notwendig – einfach loslaufen lassen.
+    document.addEventListener("DOMContentLoaded", function () {
+      const videoElement = document.getElementById('video3');
+      const player3 = new Vimeo.Player(videoElement);
+
+      // Optional: z. B. Konsolenausgabe
+      player3.on('play', function () {
+        console.log("Teil 3 läuft ab 15:36...");
+      });
+    });
+  </script>
+</body>
+</html>
